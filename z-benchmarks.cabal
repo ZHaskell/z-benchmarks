@@ -29,6 +29,8 @@ executable json-benchmark
                     , criterion 
                     , aeson
                     , bytestring
+                    , deepseq
+                    , text
                     , Z-Data >= 0.3 
                     , Z-IO >= 0.3
     hs-source-dirs:   json-benchmark/
