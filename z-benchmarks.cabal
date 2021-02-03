@@ -1,0 +1,37 @@
+cabal-version:      2.4
+name:               Z-Benchmarks
+version:            0.1.0.0
+
+maintainer:         winter
+
+executable redis-benchmark-z
+    main-is:          redis-bench-z.hs
+    build-depends:    base >=4.12.0.0
+                    , Z-Data >= 0.3 
+                    , Z-IO >= 0.3
+    hs-source-dirs:   redis-benchmark/
+    default-language: Haskell2010
+    ghc-options:  -O2 -threaded -rtsopts -eventlog -with-rtsopts=-N
+
+executable redis-benchmark-base
+    main-is:          redis-bench-base.hs
+    build-depends:    base >=4.12.0.0
+                    , network-run >= 0.2.4
+                    , network
+                    , bytestring >= 0.10
+    hs-source-dirs:   redis-benchmark/
+    default-language: Haskell2010
+    ghc-options:  -O2 -threaded -rtsopts -eventlog -with-rtsopts=-N
+
+executable json-benchmark
+    main-is:          json-bench.hs
+    build-depends:    base >=4.12.0.0
+                    , criterion 
+                    , aeson
+                    , bytestring
+                    , Z-Data >= 0.3 
+                    , Z-IO >= 0.3
+    hs-source-dirs:   json-benchmark/
+    default-language: Haskell2010
+    ghc-options:  -O2 
+

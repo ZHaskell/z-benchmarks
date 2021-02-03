@@ -1,0 +1,11 @@
+[package]
+name = "tcp_mio"
+version = "0.1.0"
+authors = ["Tigran Bayburtsyan <tigran@bayburtsyan.com>"]
+
+[dependencies]
+mio = "0.6"
+slab = "0.3.0"
+
+[profile.release]
+debug = true
